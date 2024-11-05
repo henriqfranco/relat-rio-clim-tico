@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.qualidade {
+    border: 1px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.qualidade h3 {
+    font-weight: normal;
+}
+
+.qualidade .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.qualidade .stats div {
+    background-color: rgb(212, 212, 212);
+    padding: 0.3rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qualidade .stats div span {
+    color: blue;
+}
+
+hr {
+    width: 100%;
+}
+
+#qualAr {
+    width: 100%;
+    text-align: center;
+    margin-block: 0.5rem;
+    border-radius: 10px;
+}
+
+.divisoria {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+button{
+    background-color: #79A7DD;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    border-radius: 20px;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+th {
+    background-color: #79A7DD;
+    color: #ffffff;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #d3e0ea;
+}
+
+.hidden {
+    display: none;
+}

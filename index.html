@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Climático</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Relatório Climático</h1>
+        <div class="top">
+            <div class="inputs">
+                <div class="input">
+                    <label for="est">Estado:</label>
+                    <select name="estado" id="est">
+                        <option value="none">SELECIONE UM ESTADO</option>
+                    </select>
+                </div>
+                <div class="input hidden" id="inpCid">
+                    <label for="cid">Cidade:</label>
+                    <select name="cidade" id="cid">
+                        <option value="none">SELECIONE UMA CIDADE</option>
+                    </select>
+                </div>
+                <div class="input periodoColeta hidden">
+                    <label for="data">Período de Coleta:</label>
+                    <input type="text" name="data" id="data" readonly>
+                </div>
+            </div>
+            <div class="qualidade hidden">
+                <h3>Qualidade do Ar</h3>
+                <span id="qualAr"></span>
+                <div class="stats">
+                    <div><span>co:</span><p id="co"></p></div>
+                    <div><span>no2:</span><p id="no2"></p></div>
+                    <div><span>o3:</span><p id="o3"></p></div>
+                    <div><span>pm2_5:</span><p id="pm2"></p></div>
+                    <div><span>pm10:</span><p id="pm10"></p></div>
+                    <div><span>so2:</span><p id="so2"></p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divisoria hidden">
+            <hr>
+            <p>No dia <strong><span id="dataAtual"></span> ás <span id="horaAtual"></span></strong> foram coletados dados climáticos de <strong><span id="cidadeColetada"></span> - <span id="siglaEstadoColetado"></span></strong> presentes no quadro abaixo.</p>
+            <hr>
+        </div>
+
+        <button class="hidden" id="salvar">Salvar</button>
+
+        <table class="hidden">
+            <thead>
+                <tr>
+                    <th>Horário</th>
+                    <th>Condição</th>
+                    <th>Chuva (%)</th>
+                    <th>Temperatura (C°)</th>
+                    <th>Sensação (C°)</th>
+                    <th>Umidade (%)</th>
+                    <th>Vento (Kph)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
